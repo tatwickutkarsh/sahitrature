@@ -11,10 +11,11 @@
       <a class="nav-item nav-link text-white" href="#writers">Writers</a>
       <a class="nav-item nav-link  text-white" href="#social" tabindex="-1" aria-disabled="true">Social</a>
       {% if user.is_authenticated %}
-      <a class="nav-item nav-link" tabindex="-1" aria-disabled="true" al>Hello,<small>{{user.username}}</small></a>
-      <button type="button" class="btn btn-outline-secondary "><a class="text-white" href="{% url 'logout' %}" >Logout</a>
-      {% else %}
-      <button type="button" class="btn btn-outline-secondary "><a class="text-white" href="{% url 'login' %}" >Login</a></button>
+      <a class="nav-item nav-link text-white topele1" tabindex="-1" aria-disabled="true" al>Hello,<small>{{user.first_name}}</small></a>
+      <button type="button" class="btn btn-outline-secondary topele2"><a class="text-white" href="{% url 'logout' %}" >Logout</a>
+        {% else %}
+      <button type="button" class="btn btn-outline-secondary topele2"><a class="text-white" href="{% url 'login' %}" >Login</a></button>
+      <button type="button" class="btn btn-outline-secondary topele3 "><a class="text-white" href="{% url 'registration' %}" >Register</a></button>
       {% endif %}  
     </div>
   </div>

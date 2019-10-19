@@ -1,0 +1,22 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+</div>
+</nav>
+<br>
+        <div class="container">
+            <div class="col-sm-6">
+                <div class="card rounded-lg shadow mb-4 bg-white">
+                    <div class="card-header">Sign Up</div>
+                    <div class="card-body">
+                            <form method="post" action="" novalidate>
+                                    {% csrf_token %}
+                                    {{form.as_p}}
+        <input type="submit" value="Sign Up" class="btn btn-primary"/>
+        <!--<input type="hidden" name="next" value="{{ next }}" />-->
+    </form>
+</div> 
+</div>    
+</div>
+</div>          
+{% endblock %}
