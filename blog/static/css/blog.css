@@ -1,0 +1,91 @@
+body{
+    background-color:white;
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:20px;
+    color:#2d2d2d;
+    background-attachment:fixed;
+}
+.col-md-3
+{
+    width:100%;
+}
+.col-sm-6{
+    width:100%;
+}
+.tab
+{
+    background-color: beige;
+}
+.tag{
+    border-bottom-style: inset;
+}
+.head{
+    margin-left: 6.5%;
+}
+.card-img-top{
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+.blok{
+    border-bottom-style: ridge;
+}
+.fa {
+
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+.btn-primary{
+    margin-top:5%;
+}
+.card-img-top{
+    height:384px;
+    /*width:288px;*/
+}
+.login{
+    height:100%;
+    position: relative;
+    
+}
+.cop
+{
+    color: white;
+    font-size: 20px;
+}
+.d-inline-block{
+    background-color:#343a40;
+}
+/* .about{
+    background-image:url("../images/b2.jpg");
+    background-attachment: fixed;
+}*/
+.quotes{
+    background-image: url("../images/b1.jpg");
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+}
+.card-block{
+    border-style: ridge;
+    border-radius:5%;
+    background-color: lightgray;
+}
+
+.jumbotrona{
+    background-color:#343a40;
+    height: 120px;
+    margin:auto;
+}
+#toggle{
+    color:white;
+    border-color:navajowhite;
+}
+.navhead a{
+color:white;
+}
+#headstyle{
+    font-size:40px;
+}

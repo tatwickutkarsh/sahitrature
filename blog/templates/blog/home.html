@@ -1,0 +1,127 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+  <button class="navbar-toggler" id="toggle" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div  class=" navbar-collapse collapse navstyle" id="navbarNavAltMarkup">
+    <div class="navbar-nav navbar-right">
+      <a class="nav-item nav-link active text-white t" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link text-white" href="#about">About</a>
+      <a class="nav-item nav-link text-white" href="#writers">Writers</a>
+      <a class="nav-item nav-link  text-white" href="#social" tabindex="-1" aria-disabled="true">Social</a>
+      {% if user.is_authenticated %}
+      <a class="nav-item nav-link" tabindex="-1" aria-disabled="true" al>Hello,<small>{{user.username}}</small></a>
+      <button type="button" class="btn btn-outline-secondary "><a class="text-white" href="{% url 'logout' %}" >Logout</a>
+      {% else %}
+      <button type="button" class="btn btn-outline-secondary "><a class="text-white" href="{% url 'login' %}" >Login</a></button>
+      {% endif %}  
+    </div>
+  </div>
+  </div>
+</nav>
+
+<!--jumbotron -->
+<div class="jumbotron jumbotron-fluid bg-transparent tag" id="about">
+  <div class="container">
+    <h1 class="display-4  text-center ">Feel The Essence</h1>
+    <p class="lead text-center">Community of writers and Readers.</p>
+  </div>
+</div>
+
+<!-- about -->
+<div class="container-fluid text-center about" id="">
+<div class="jumbotron jumbotron-fluid bg-transparent">
+  <div class="container">
+    <p class="lead  text-center">This community aims at promoting expression of emotions through writing, among people across the globe.Aspiring poets and writers are welcome to share their masterpieces among the readers of our community.This is an open source community.We help budding writers gain their audience and collaborate with other writers of our community.</p>
+  </div>
+</div>
+</div>
+
+<!-- quotes -->
+<div class="jumbotron jumbotron-fluid bg-transparent quotes" >
+  <div class="container overlay text-white">
+    <blockquote class="blckqoute">
+    <h1 class="  text-centre ">"Don’t tell me the moon is shining; show me the glint of light on broken glass."</h1>
+    </blockquote>
+        <p class=" text-centre">-Anton Chekhov<p>
+
+  </div>
+</div>
+<!-- cards -->
+
+<h1 class="  head" id="writers">Writers</h1>
+<div class="container blok">
+    <div class="row mx-md-n5">
+
+        <div class="col-md-3 col-sm-6 ">
+            <div class="card-block text-center" style="width: 18rem;">
+                <img src="../static/images/kundan.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold">Kundan Anand</h5>
+                    <p class="card-text ">One of the best poets of our community, writes mainly on principles of life, bravery,love and truth. </p>
+                    <a target="_blank" href="https://www.yourquote.in/kundananand" class="btn btn-primary">YourQuote profile</a>
+                    <a target="_blank" href="https://www.facebook.com/kundan.anand.129" class="btn btn-primary ">Facebook profile</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 ">
+            <div class="card-block text-center" style="width: 18rem;">
+                <img src="../static/images/c1.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold">Vivek Singh</h5>
+                    <p class="card-text ">Writes poems mainly on bravery, principles of life,political issues, love and love for country.Catch him for 'veer-ras' poems. </p>
+                    <a target="_blank" href="https://www.yourquote.in/vivek-singh-m0xo/quotes" class="btn btn-primary">YourQuote profile</a>
+                    <a target="_blank" href="https://www.facebook.com/vk163" class="btn btn-primary ">Facebook profile</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 ">
+            <div class="card-block text-center" style="width: 18rem;">
+                <img src="../static/images/wazir.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold">Naitik Wazir</h5>
+                    <p class="card-text ">Catch him for the flavour of urdu and hindi in shayari.Writes mainly on love and communal peace </p>
+                    <a target="_blank" href="https://www.yourquote.in/naitikraj" class="btn btn-primary">YourQuote profile</a>
+                    <a target="_blank" href="https://www.facebook.com/naitik.raj.716" class="btn btn-primary ">Facebook profile</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 ">
+            <div class="card-block text-center" style="width: 18rem;">
+                <img src="../static/images/shivansu.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold">Shivanshu Singh</h5>
+                    <p class="card-text ">One of the best shayars of our community, Writes mainly on relations, society and love. Known for his gleeful creations.</p>
+                    <a target="_blank" href="https://www.yourquote.in/shivanshu_sng_619" class="btn btn-primary">YourQuote profile</a>
+                    <a target="_blank" href="https://www.facebook.com/shivanshu.singh.1485" class="btn btn-primary ">Facebook profile</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 ">
+            <div class="card-block text-center" style="width: 18rem;">
+                <img src="../static/images/ashu.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold">Ashutosh Kumar</h5>
+                    <p class="card-text ">Writes mainly on love,principles of life and beauty of struggle. skill of writing the things you feel and want to read. </p>
+                    <a target="_blank" href="https://www.yourquote.in/ashutosh_kmr9015" class="btn btn-primary">YourQuote profile</a>
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100011430640170" class="btn btn-primary ">Facebook profile</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 ">
+            <div class="card-block text-center" style="width: 18rem;">
+                <img src="../static/images/annu.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold">Annu Upadhyay</h5>
+                    <p class="card-text ">Writes mainly on beauty of love , and her love for 'assi ghat ki chai'. flavour of 'Banaras' in her writings makes them awesome</p>
+                    <a target="_blank" href="https://www.yourquote.in/annu15ghazipur" class="btn btn-primary">YourQuote profile</a>
+                    <a target="_blank" href="https://www.facebook.com/annu.upadhyay.50767" class="btn btn-primary ">Facebook profile</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
