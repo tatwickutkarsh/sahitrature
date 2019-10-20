@@ -5,6 +5,7 @@ from  .forms import PostForm,CommentForm'''
 from django.contrib.auth.decorators import login_required 
 from django.contrib.auth.models import User
 from .forms import UserForm
+from django.contrib.auth import login,authenticate
 def post_list(request):
     return render(request, 'blog/home.html', { })
 #def login(request):
@@ -15,12 +16,11 @@ def registration(request):
     if request.method=='POST':
         form= UserForm(request.POST)
         if form.is_valid():
-            username = form.cleaned_data['username']
-            first_name = form.cleaned_data['first_name']
-            last_name= form.cleaned_data['last_name']
-            email= form.cleaned_data['email']
-            password =form.cleaned_data['password']
-            User.objects.create_user(username=username, first_name=first_name, last_name=last_name, password=password,email=email)
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password =form.cleaned_data.get('password')
+            user=authenticate(username=username, password=raw_password)
+            login(request,user)
             return redirect('post_list')
     else:
         form= UserForm()
